@@ -59,19 +59,31 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-10 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                useLightText
-                  ? "text-white/80 hover:text-white"
-                  : "text-[color:var(--color-text-muted)] hover:text-[color:var(--color-primary)]"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || pathname === `${link.href}/`;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-sm transition-all ${
+                  isActive ? "font-bold" : "font-medium"
+                } ${
+                  useLightText
+                    ? isActive ? "text-white" : "text-white/80 hover:text-white"
+                    : isActive ? "text-[color:var(--color-primary)]" : "text-[color:var(--color-text-muted)] hover:text-[color:var(--color-primary)]"
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span 
+                    className={`absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full ${
+                      useLightText ? "bg-white" : "bg-[color:var(--color-primary)]"
+                    }`}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA buttons */}
@@ -125,16 +137,24 @@ export default function Navbar() {
       >
         <div className="border-t border-black/5 bg-[#F1ECDA] px-6 pb-8 shadow-inner">
           <nav className="flex flex-col gap-5 pt-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-lg font-medium text-[color:var(--color-text)] hover:text-[color:var(--color-primary)]"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || pathname === `${link.href}/`;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-lg flex items-center transition-colors ${
+                    isActive 
+                      ? "font-bold text-[color:var(--color-primary)]" 
+                      : "font-medium text-[color:var(--color-text)] hover:text-[color:var(--color-primary)]"
+                  }`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                  {isActive && <span className="ml-3 h-2 w-2 rounded-full bg-[color:var(--color-primary)]" />}
+                </Link>
+              );
+            })}
             <div className="my-2 h-px bg-black/5" />
             <Link
               href="/download"
