@@ -86,22 +86,22 @@ export default function DownloadPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#F1ECDA] px-6 py-24">
+      <section className="bg-[color:var(--color-cream)] px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-16 md:grid-cols-2">
             <div>
-              <h1 className="text-5xl font-bold tracking-tight text-[#1A2E35] leading-tight">
+              <h1 className="text-5xl font-medium tracking-wide text-[color:var(--color-text)] leading-tight">
                 Download Deekup.
                 <br />
-                <span className="text-[#1A6B5C]">Eat better tonight.</span>
+                <span className="text-[color:var(--color-primary)]">Eat better tonight.</span>
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-[#5a7a82]">
+              <p className="mt-6 text-lg leading-relaxed text-[color:var(--color-text-muted)]">
                 Free on iOS and Android. Set up your account, discover restaurants near you, and book your first discounted table — all in under 3 minutes.
               </p>
               <ul className="mt-8 space-y-3">
                 {appFeatures.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-[#1A2E35]">
-                    <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1A6B5C]">
+                  <li key={feature} className="flex items-center gap-3 text-sm text-[color:var(--color-text)]">
+                    <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-primary)]">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                         <path d="M2 5l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
@@ -138,7 +138,7 @@ export default function DownloadPage() {
                   </span>
                 </a>
               </div>
-              <p className="mt-4 text-sm text-[#5a7a82]">iOS 16+ and Android 10+ required. Free to download.</p>
+              <p className="mt-4 text-sm text-[color:var(--color-text-muted)]">iOS 16+ and Android 10+ required. Free to download.</p>
             </div>
 
             {/* Phone mockups */}
@@ -159,7 +159,7 @@ export default function DownloadPage() {
       {/* QR code section */}
       <section className="bg-[#1A2E35] px-6 py-20 text-white">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold">Scan to download</h2>
+          <h2 className="text-3xl font-medium">Scan to download</h2>
           <p className="mt-3 text-white/60">Point your phone camera at the QR code to open the app store directly.</p>
           <div className="mt-10 flex flex-wrap justify-center gap-12">
             <div className="flex flex-col items-center gap-4">
@@ -179,17 +179,17 @@ export default function DownloadPage() {
       </section>
 
       {/* For restaurants CTA */}
-      <section className="bg-[#F1ECDA] px-6 py-20">
+      <section className="bg-[color:var(--color-cream)] px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#E8913A]">Are you a restaurant?</div>
-          <h2 className="text-3xl font-bold text-[#1A2E35]">Partner with Deekup</h2>
-          <p className="mt-4 text-[#5a7a82]">
+          <div className="mb-3 text-sm font-semibold uppercase tracking-widest text-[color:var(--color-accent)]">Are you a restaurant?</div>
+          <h2 className="text-3xl font-medium text-[color:var(--color-text)]">Partner with Deekup</h2>
+          <p className="mt-4 text-[color:var(--color-text-muted)]">
             List your restaurant on Deekup and fill off-peak tables with motivated food lovers. No setup fee, no monthly subscription.
           </p>
           <div className="mt-8">
             <Link
               href="/for-restaurants"
-              className="inline-flex items-center gap-2 rounded-full bg-[#1A2E35] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#1A6B5C]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#1A2E35] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[color:var(--color-primary)]"
             >
               Learn about partnering &rarr;
             </Link>
