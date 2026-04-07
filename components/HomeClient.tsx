@@ -27,7 +27,7 @@ const howItWorksSteps = [
   {
     icon: <Percent className="h-6 w-6 text-[#1A6B5C]" />,
     title: "Dine and pay with Deekup",
-    description: "Enjoy the full fine dining experience. When the bill arrives, tap your Deekup Card to pay at the discounted rate automatically.",
+    description: "Enjoy the full fine dining experience. When the bill arrives, pay with your Deekup Card at the restaurant POS — the discounted rate is applied automatically.",
   },
 ];
 

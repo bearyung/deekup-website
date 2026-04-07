@@ -42,7 +42,7 @@ const dinerSteps = [
     step: "06",
     title: "Pay with your Deekup Card",
     description:
-      "When the bill arrives, open your Deekup app and tap the card to pay. Your discount is calculated and applied automatically. You'll see the final amount before confirming.",
+      "When the bill arrives, present your Deekup Card at the restaurant POS terminal. Your discount is applied automatically — no vouchers, no codes, no awkward conversations with staff.",
   },
 ];
 
